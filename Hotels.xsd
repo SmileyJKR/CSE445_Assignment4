@@ -3,7 +3,7 @@
 		<xs:complexType>
 			<xs:sequence>
 					<!-- Remember about Multiple Hotel types being allowed -->
-				<xs:element name = "Hotel" minOccurs = "0" maxOccurs = "Unbounded">
+				<xs:element name = "Hotel" minOccurs = "0" maxOccurs = "unbounded">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name = "Name" type = "xs:string"/>
