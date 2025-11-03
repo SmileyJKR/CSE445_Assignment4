@@ -3,11 +3,11 @@
 		<xs:complexType>
 			<xs:sequence>
 					<!-- Remember about Multiple Hotel types being allowed -->
-				<xs:element name = "Hotel" maxOccurs = "Unbounded">
+				<xs:element name = "Hotel" minOccurs = "0" maxOccurs = "Unbounded">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name = "Name" type = "xs:string"/>
-							<xs:element name = "Phone" type = "xs:string" maxOccurs = "unbounded"/>
+							<xs:element name = "Phone" type = "xs:string" minOccurs = "0" maxOccurs = "unbounded"/>
 							<xs:element name = "Address">
 								<xs:complexType>
 									<xs:sequence>
@@ -17,6 +17,7 @@
 										<xs:element name = "State" type = "xs:string"/>
 										<xs:element name = "Zip" type = "xs:string"/>
 									</xs:sequence>
+									<!-- The required attribute -->
 									<xs:attribute name = "NearestAirport" type = "xs:string"  use="required"/>
 								</xs:complexType>
 							</xs:element>
